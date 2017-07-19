@@ -17,6 +17,9 @@ echo 'Поточна дата: ' .date('d-m-Y H:i:s'),"<br />";
 echo "Мене звати: $name","<br />";
 echo "Мені $age роки";
 
+unset($name);
+unset($age);
+
 echo <<<_END
 </body>
 </html>
