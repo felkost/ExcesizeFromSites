@@ -15,10 +15,17 @@ $name = "Гадкий-Я";
 $age = 43;
 echo 'Поточна дата: ' .date('d-m-Y H:i:s'),"<br />";
 echo "Мене звати: $name","<br />";
-echo "Мені $age роки";
+echo "Мені $age роки","<br />";
 
 unset($name);
 unset($age);
+
+define("My_Const", "Привіт, світ!");
+echo "Перевірка існування константи: ",defined("My_Const"),"<br />";
+echo "<h2>",My_Const,"</h2>"; //виведення константи
+
+$arr["key"]="val";
+echo $arr["key"],"<br />";
 
 echo <<<_END
 </body>
