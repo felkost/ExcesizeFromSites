@@ -26,7 +26,7 @@ echo "<h2>",My_Const,"</h2>"; //виведення константи
 
 $arr["key"]="val";
 echo $arr["key"],"<br />";
-
+var_dump($arr['key']);
 echo <<<_END
 </body>
 </html>
