@@ -8,7 +8,7 @@ echo <<<_END
 </head>
 <body>
 _END;
-require_once '../sanitizeString.php';
+require_once '../3 Безпека даних/sanitizeString.php';
     //Если город пустой - покажем форму
     if (empty($_REQUEST['city'])) {
         echo <<<_END
