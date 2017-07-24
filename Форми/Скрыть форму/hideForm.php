@@ -1,3 +1,5 @@
+<?php
+echo <<<_END
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,25 +7,24 @@
     <title>Приховати форму</title>
 </head>
 <body>
-<?php
+_END;
+require_once '../sanitizeString.php';
     //Если город пустой - покажем форму
-    if (empty($_REQUEST['city']))
-    {
-echo <<<_END
+    if (empty($_REQUEST['city'])) {
+        echo <<<_END
             <form action="" method="GET">
                         <input type="text" name="city">
                         <input type="submit">
                     </form>
 _END;
     }
-?>
-
-<?php
     //Если форма была отправлена и город не пустой:
     if (isset($_REQUEST['city'])) {
-        $city = strip_tags($_REQUEST['city']);
+        $city = sanitizeString($_REQUEST['city']);
         echo 'Ваш город: '.$city;
     }
-?>
+echo <<<_END
 </body>
 </html>
+_END;
+?>
