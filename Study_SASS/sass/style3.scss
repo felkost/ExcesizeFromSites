@@ -1,0 +1,13 @@
+@import "../bourbon/bourbon";
+.box {
+  border: 1px solid #2aa4b2;
+  height: 40px; width: 40px;
+  @include background-image(linear-gradient(#8fdce5, #6284d1));
+  @include transition(all 2.0s ease-in-out);
+  &:hover {
+    @include transform(rotate(90deg));
+  }
+}
+
+
+
