@@ -1,0 +1,14 @@
+@import "compass/reset";
+
+$size_img : 64px;
+
+@mixin _background($url, $width, $height, $repeat){
+  background: $url  $width  $height  $repeat;
+}
+
+div {
+  width: $size_img; /* Ширина */
+  height: $size_img; /* Высота */
+  box-shadow: inset 0 0 6px; /* Параметры тени */
+  @include  _background(url(../img/android.png), 50%, 50%, no-repeat);/* Фоновый рисунок */
+}
